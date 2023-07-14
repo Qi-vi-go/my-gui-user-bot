@@ -1,3 +1,2 @@
-import {render} from './render.js';
-render();
-console.log();
+import './render.js';
+

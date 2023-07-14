@@ -2,13 +2,16 @@
   "name": "qi-vi-go",
   "version": "1.0.0",
   "description": "automation of discord, telegram and others",
-  "main": "main.js",
+  "main": "my_node/main.js",
   "scripts": {
     "start": "electron ."
   },
   "author": "Qi-vi-go",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^25.2.0"
+    "electron": "^25.3.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
   }
 }
