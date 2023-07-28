@@ -25,6 +25,12 @@ const createWindow = () => {
     })
     const contextMenu = Menu.buildFromTemplate([
         {
+            label: 'Развернуть',
+            click: () => {
+                win.maximize();
+            }
+        },
+        {
           label: 'Выход',
           click: () => {
             win.close();
@@ -32,8 +38,8 @@ const createWindow = () => {
         }
       ]);
     tray.setContextMenu(contextMenu);
-
-    win.webContents.openDevTools();
+    win.maximize();
+    //win.webContents.openDevTools();
     win.webContents.executeJavaScript(`console.log("Hello from runtime!");`);
   }
 
