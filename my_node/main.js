@@ -39,7 +39,7 @@ const createWindow = () => {
       ]);
     tray.setContextMenu(contextMenu);
     win.maximize();
-    //win.webContents.openDevTools();
+    win.webContents.openDevTools();
     win.webContents.executeJavaScript(`console.log("Hello from runtime!");`);
   }
 
