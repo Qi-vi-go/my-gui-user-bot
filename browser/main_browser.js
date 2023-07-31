@@ -3,6 +3,8 @@ import './render.js';
 import {config} from "./config.js";
 
 import {MESSAGE_CREATE} from "./discord_message_processor/MESSAGE_CREATE.js"
+import {get_READY} from "./discord_message_processor/get_READY.js"
+
 
 
 
@@ -38,7 +40,9 @@ function startMyDisWebSock(){
     //console.log(message);
 
     switch (message.t){
-      case "MESSAGE_CREATE": MESSAGE_CREATE (message.d); 
+      case "READY": get_READY (message.d); 
+      break;
+      case "MESSAGE_CREATE": MESSAGE_CREATE (message.d);
       break;
     }  
 
